@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noi, la qualità</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@400;500;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=4">
+    <!-- Footer contact layout refinements -->
+    <style>
+      .nq-s3-footer .nq-s3-col-logo { display:flex; flex-direction:column; align-items:flex-start; gap:24px; }
+      .nq-s3-footer .nq-s3-col-logo .nq-s3-social-icons { display:flex; flex-wrap:wrap; gap:12px; }
+      .nq-s3-footer .nq-s3-col-contact { min-width:240px; max-width:340px; }
+      .nq-s3-footer .nq-s3-company-name { font-weight:600; color:#fff; margin:0 0 18px; font-size:14px; }
+      .nq-s3-footer .nq-s3-col-contact address { font-style:normal; }
+      .nq-s3-footer .nq-s3-col-contact address p { display:flex; align-items:flex-start; gap:12px; margin:0 0 15px; color:#d1d9e6; font-size:12px; line-height:1.8; }
+      .nq-s3-footer .nq-s3-col-contact address i { color:#ffb800; width:16px; flex:0 0 16px; margin-top:4px; }
+      .nq-s3-footer .nq-s3-col-contact address a { color:inherit; text-decoration:none; overflow-wrap:anywhere; transition:color .25s ease; }
+      .nq-s3-footer .nq-s3-col-contact address a:hover { color:#ffb800; }
+      @media (max-width:480px) { .nq-s3-footer .nq-s3-col-contact { max-width:100%; min-width:0; } }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-left">
+                <span><img src="img/it-flag.png" alt="IT Flag" class="flag-icon"> <span data-i18n="top.italian">Prodotti italiani di Alta Qualità</span></span>
+            </div>
+            <div class="top-center">
+                <span><i class="fa-solid fa-shield-halved"></i> <span data-i18n="top.selection">Selezione dei migliori produttori</span></span>
+                <span><i class="fa-solid fa-leaf"></i> <span data-i18n="top.quality">Qualità garantita</span></span>
+                <span><i class="fa-solid fa-truck-fast"></i> <span data-i18n="top.shipping">Spedizione in tutta Europa</span></span>
+            </div>
+            <div class="top-right">
+                <div class="lang-switcher" data-lang-switcher>
+                    <button type="button" class="language-selector" aria-haspopup="listbox" aria-expanded="false" aria-label="Scegli la lingua" data-i18n-aria="lang.choose">
+                        <img src="img/it-flag.png" alt="" class="flag-icon" data-lang-flag> <span data-lang-code>IT</span> <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <ul class="lang-menu" role="listbox">
+                        <li role="presentation"><button type="button" role="option" data-lang="it" aria-selected="true"><img src="img/it-flag.png" alt="" class="lang-flag"><span>Italiano</span></button></li>
+                        <li role="presentation"><button type="button" role="option" data-lang="en" aria-selected="false"><img src="img/en-flag.svg" alt="" class="lang-flag"><span>English</span></button></li>
+                    </ul>
+                </div>
+                <i class="fa-solid fa-magnifying-glass top-icon"></i>
+                <i class="fa-regular fa-user top-icon"></i>
+                <div class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping top-icon"></i>
+                    <span class="cart-badge">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container header-inner">
+            <!-- Logo -->
+            <a href="#" class="logo">
+                <img src="img/logo.png" alt="Main Logo">
+            </a>
+
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#"><span data-i18n="nav.products">Prodotti</span> <i class="fa-solid fa-chevron-down small-icon"></i></a></li>
+                    <li><a href="#"><span data-i18n="nav.categories">Categorie</span> <i class="fa-solid fa-chevron-down small-icon"></i></a></li>
+                    <li><a href="#" data-i18n="nav.about">Chi Siamo</a></li>
+                    <li><a href="#" data-i18n="nav.contact">Contatti</a></li>
+                </ul>
+            </nav>
+
+            <!-- Search Bar -->
+            <div class="header-search">
+                <input type="text" placeholder="Cerca un prodotto..." aria-label="Cerca un prodotto" data-i18n-placeholder="search.placeholder" data-i18n-aria="search.aria">
+                <button type="submit" aria-label="Cerca" data-i18n-aria="search.button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slider Section -->
+    <section class="hero-slider">
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <img src="img/hero.png" alt="Hero Background 1" class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content-wrapper">
+                <div class="hero-content">
+                    <!-- Brand  Image -->
+                    <img src="img/brand.png" alt="Brand Logo" class="hero-brand-logo">
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">AUTENTICITÀ • QUALITÀ • TRADIZIONE</p>
+                    <h1 class="hero-title" data-i18n-html="hero.title">Scopri il vero<br>sapore dell'Italia</h1>
+                    <p class="hero-description" data-i18n-html="hero.description">Selezioniamo con cura i migliori prodotti alimentari<br>italiani per portare sulla tua tavola la qualità,<br>la tradizione e la passione del nostro territorio.</p>
+                    
+                    <div class="hero-actions">
+                        <a href="#" class="btn-primary"><span data-i18n="hero.cta">Esplora la nostra collezione</span> <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="btn-video"><span class="play-icon"><i class="fa-solid fa-play"></i></span> <span data-i18n="hero.video">Guarda il video</span></a>
+                    </div>
+                </div>
+                <div class="hero-handwritten">
+                    <p data-i18n-html="hero.handwritten">Il gusto<br>della vera<br>Italia</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <img src="img/hero-2.png" alt="Hero Background 2" class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content-wrapper">
+                <div class="hero-content">
+                    <img src="img/brand.png" alt="Brand Logo" class="hero-brand-logo">
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">AUTENTICITÀ • QUALITÀ • TRADIZIONE</p>
+                    <h1 class="hero-title" data-i18n-html="hero.title">Scopri il vero<br>sapore dell'Italia</h1>
+                    <p class="hero-description" data-i18n-html="hero.description">Selezioniamo con cura i migliori prodotti alimentari<br>italiani per portare sulla tua tavola la qualità,<br>la tradizione e la passione del nostro territorio.</p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn-primary"><span data-i18n="hero.cta">Esplora la nostra collezione</span> <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="btn-video"><span class="play-icon"><i class="fa-solid fa-play"></i></span> <span data-i18n="hero.video">Guarda il video</span></a>
+                    </div>
+                </div>
+                <div class="hero-handwritten">
+                    <p data-i18n-html="hero.handwritten">Il gusto<br>della vera<br>Italia</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <img src="img/hero-3.png" alt="Hero Background 3" class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content-wrapper">
+                <div class="hero-content">
+                    <img src="img/brand.png" alt="Brand Logo" class="hero-brand-logo">
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">AUTENTICITÀ • QUALITÀ • TRADIZIONE</p>
+                    <h1 class="hero-title" data-i18n-html="hero.title">Scopri il vero<br>sapore dell'Italia</h1>
+                    <p class="hero-description" data-i18n-html="hero.description">Selezioniamo con cura i migliori prodotti alimentari<br>italiani per portare sulla tua tavola la qualità,<br>la tradizione e la passione del nostro territorio.</p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn-primary"><span data-i18n="hero.cta">Esplora la nostra collezione</span> <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#" class="btn-video"><span class="play-icon"><i class="fa-solid fa-play"></i></span> <span data-i18n="hero.video">Guarda il video</span></a>
+                    </div>
+                </div>
+                <div class="hero-handwritten">
+                    <p data-i18n-html="hero.handwritten">Il gusto<br>della vera<br>Italia</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="container slider-controls">
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+            <div class="slider-nav">
+                <button class="nav-prev" aria-label="Slide precedente" data-i18n-aria="slider.prev"><i class="fa-solid fa-arrow-left"></i></button>
+                <span class="slide-count">1 / 3</span>
+                <button class="nav-next" aria-label="Slide successiva" data-i18n-aria="slider.next"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section End -->
+
+    <!-- Category & Featured Products Section Start -->
+<section class="nq-s2-wrapper">
+    <div class="nq-s2-container">
+        
+        <!-- Categories Section -->
+        <div class="nq-s2-categories-area">
+            <div class="nq-s2-section-heading-center">
+                <div class="nq-s2-subtitle">
+                    <img src="img/it-flag.png" alt="IT" class="nq-s2-flag">
+                    <span data-i18n="cat.eyebrow">LE NOSTRE CATEGORIE</span>
+                </div>
+                <h2 class="nq-s2-title" data-i18n="cat.title">Un viaggio nei sapori italiani</h2>
+            </div>
+
+            <div class="nq-s2-cat-row">
+                <!-- Cat Item 1 -->
+                <a href="#" class="nq-s2-cat-item">
+                    <div class="nq-s2-cat-img"><img src="img/pasta.png" alt="Pasta"></div>
+                    <p data-i18n-html="cat.pasta">Varietà di<br>PASTA</p>
+                    <i class="fa-solid fa-arrow-right nq-s2-cat-arrow"></i>
+                </a>
+                <!-- Cat Item 2 -->
+                <a href="#" class="nq-s2-cat-item">
+                    <div class="nq-s2-cat-img"><img src="img/riso.png" alt="Riso" data-i18n-alt="alt.rice"></div>
+                    <p data-i18n-html="cat.rice">Varietà di<br>RISO</p>
+                    <i class="fa-solid fa-arrow-right nq-s2-cat-arrow"></i>
+                </a>
+                <!-- Cat Item 3 -->
+                <a href="#" class="nq-s2-cat-item">
+                    <div class="nq-s2-cat-img"><img src="img/salumi.jpg" alt="Salumi" data-i18n-alt="alt.cured"></div>
+                    <p data-i18n-html="cat.cured">Varietà di<br>SALUMI</p>
+                    <i class="fa-solid fa-arrow-right nq-s2-cat-arrow"></i>
+                </a>
+                <!-- Cat Item 4 -->
+                <a href="#" class="nq-s2-cat-item">
+                    <div class="nq-s2-cat-img"><img src="img/formaggi.jpg" alt="Formaggi" data-i18n-alt="alt.cheese"></div>
+                    <p data-i18n-html="cat.cheese">Varietà di<br>Formaggi</p>
+                    <i class="fa-solid fa-arrow-right nq-s2-cat-arrow"></i>
+                </a>
+                <!-- Cat Item 5 -->
+                <a href="#" class="nq-s2-cat-item">
+                    <div class="nq-s2-cat-img"><img src="img/sotoli.jpg" alt="Sottoli" data-i18n-alt="alt.preserves"></div>
+                    <p data-i18n-html="cat.preserves"><br>SOTTOLI</p>
+                    <i class="fa-solid fa-arrow-right nq-s2-cat-arrow"></i>
+                </a>
+                <!-- Cat Item 6 -->
+                <a href="#" class="nq-s2-cat-item">
+                    <div class="nq-s2-cat-img"><img src="img/miele.jpg" alt="Miele" data-i18n-alt="alt.honey"></div>
+                    <p data-i18n-html="cat.honey"><br>MIELE</p>
+                    <i class="fa-solid fa-arrow-right nq-s2-cat-arrow"></i>
+                </a>
+                <!-- Cat Item 7 -->
+                <a href="#" class="nq-s2-cat-item">
+                    <div class="nq-s2-cat-img"><img src="img/tonno.jpg" alt="Tonno" data-i18n-alt="alt.tuna"></div>
+                    <p data-i18n-html="cat.tuna"><br>TONNO</p>
+                    <i class="fa-solid fa-arrow-right nq-s2-cat-arrow"></i>
+                </a>
+                <!-- Cat Item 8 -->
+                <a href="#" class="nq-s2-cat-item">
+                    <div class="nq-s2-cat-img"><img src="img/tartufi.jpg" alt="Tartufi" data-i18n-alt="alt.truffles"></div>
+                    <p data-i18n-html="cat.truffles"><br>TARTUFI</p>
+                    <i class="fa-solid fa-arrow-right nq-s2-cat-arrow"></i>
+                </a>
+                <!-- Cat Item 9 -->
+                <a href="#" class="nq-s2-cat-item">
+                    <div class="nq-s2-cat-img"><img src="img/doppio.jpg" alt="Doppio Senso"></div>
+                    <p data-i18n-html="cat.doppio"><br>DOPPIO SENSO</p>
+                    <i class="fa-solid fa-arrow-right nq-s2-cat-arrow"></i>
+                </a>
+                <!-- Cat Item 10 -->
+                <a href="#" class="nq-s2-cat-item">
+                    <div class="nq-s2-cat-img"><img src="img/alcolici.jpg" alt="Alcolici" data-i18n-alt="alt.drinks"></div>
+                    <p data-i18n-html="cat.drinks"><br>ALCOLICI</p>
+                    <i class="fa-solid fa-arrow-right nq-s2-cat-arrow"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Divider Space -->
+        <div class="nq-s2-spacer"></div>
+
+        <!-- Featured Products Section -->
+        <div class="nq-s2-products-area">
+            <div class="nq-s2-prod-header">
+                <div class="nq-s2-prod-title-col">
+                    <div class="nq-s2-subtitle">
+                        <img src="img/it-flag.png" alt="IT" class="nq-s2-flag">
+                        <span data-i18n="prod.eyebrow">I NOSTRI PRODOTTI</span>
+                    </div>
+                    <h2 class="nq-s2-title-left" data-i18n="prod.title">Prodotti in evidenza</h2>
+                    <p class="nq-s2-desc" data-i18n="prod.desc">Qualità, tradizione e sapori autentici selezionati per te.</p>
+                </div>
+                <div class="nq-s2-prod-tabs-col">
+                    <ul class="nq-s2-tabs">
+                        <li class="nq-s2-tab active" data-filter="tutti" data-i18n="tab.all">Tutti</li>
+                        <li class="nq-s2-tab" data-filter="pasta" data-i18n="tab.pasta">Pasta</li>
+                        <li class="nq-s2-tab" data-filter="riso" data-i18n="tab.rice">Riso</li>
+                        <li class="nq-s2-tab" data-filter="salumi" data-i18n="tab.cured">Salumi</li>
+                        <li class="nq-s2-tab" data-filter="formaggi" data-i18n="tab.cheese">Formaggi</li>
+                        <li class="nq-s2-tab" data-filter="miele" data-i18n="tab.honey">Miele</li>
+                    </ul>
+                    <a href="#" class="nq-s2-view-all"><span data-i18n="prod.viewAll">Vedi tutti i prodotti</span> <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="nq-s2-prod-grid">
+                <!-- Product 1 -->
+                <div class="nq-s2-prod-card">
+                    <div class="nq-s2-card-top">
+                        <span class="nq-s2-badge" style="background-color: #ffb800;" data-i18n="badge.pasta">PASTA</span>
+                        <i class="fa-regular fa-heart nq-s2-heart"></i>
+                    </div>
+                    <div class="nq-s2-card-img">
+                        <img src="img/Spaghettoni.jpg" alt="Spaghettoni">
+                    </div>
+                    <div class="nq-s2-card-info">
+                        <h3>Spaghettoni</h3>
+                        <p class="nq-s2-code">NQEE17 - 500 g</p>
+                        <p class="nq-s2-origin"><img src="img/it-flag.png" alt="IT" class="nq-s2-flag"> <span data-i18n="common.italy">Italia</span></p>
+                    </div>
+                    <div class="nq-s2-card-action">
+                        <a href="#" class="nq-s2-btn-outline"><span data-i18n="common.learnMore">Scopri di più</span> <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="nq-s2-prod-card">
+                    <div class="nq-s2-card-top">
+                        <span class="nq-s2-badge" style="background-color: #00d2d3;" data-i18n="badge.rice">RISO</span>
+                        <i class="fa-regular fa-heart nq-s2-heart"></i>
+                    </div>
+                    <div class="nq-s2-card-img">
+                        <img src="img/Riso Carnaroli.jpg" alt="Riso Carnaroli" data-i18n-alt="prod.rice">
+                    </div>
+                    <div class="nq-s2-card-info">
+                        <h3 data-i18n="prod.rice">Riso Carnaroli</h3>
+                        <p class="nq-s2-code">NQRA1105 - 500 g</p>
+                        <p class="nq-s2-origin"><img src="img/it-flag.png" alt="IT" class="nq-s2-flag"> <span data-i18n="common.italy">Italia</span></p>
+                    </div>
+                    <div class="nq-s2-card-action">
+                        <a href="#" class="nq-s2-btn-outline"><span data-i18n="common.learnMore">Scopri di più</span> <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="nq-s2-prod-card">
+                    <div class="nq-s2-card-top">
+                        <span class="nq-s2-badge" style="background-color: #e84118;" data-i18n="badge.cured">SALUMI</span>
+                        <i class="fa-regular fa-heart nq-s2-heart"></i>
+                    </div>
+                    <div class="nq-s2-card-img">
+                        <img src="img/Salame Strolghino.jpg" alt="Salame Strolghino" data-i18n-alt="prod.salami">
+                    </div>
+                    <div class="nq-s2-card-info">
+                        <h3 data-i18n="prod.salami">Salame Strolghino</h3>
+                        <p class="nq-s2-code">NQS401</p>
+                        <p class="nq-s2-origin"><img src="img/it-flag.png" alt="IT" class="nq-s2-flag"> <span data-i18n="common.italy">Italia</span></p>
+                    </div>
+                    <div class="nq-s2-card-action">
+                        <a href="#" class="nq-s2-btn-outline"><span data-i18n="common.learnMore">Scopri di più</span> <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="nq-s2-prod-card">
+                    <div class="nq-s2-card-top">
+                        <span class="nq-s2-badge" style="background-color: #ffa801;" data-i18n="badge.cheese">FORMAGGI</span>
+                        <i class="fa-regular fa-heart nq-s2-heart"></i>
+                    </div>
+                    <div class="nq-s2-card-img">
+                        <img src="img/Grotta.jpg" alt="Caciocavallo" data-i18n-alt="prod.cheese">
+                    </div>
+                    <div class="nq-s2-card-info">
+                        <h3 data-i18n="prod.cheese">Caciocavallo Affinato in Grotta</h3>
+                        <p class="nq-s2-code" data-i18n="prod.cheese.code">NQF903 - 1,6 kg</p>
+                        <p class="nq-s2-origin"><img src="img/it-flag.png" alt="IT" class="nq-s2-flag"> <span data-i18n="common.italy">Italia</span></p>
+                    </div>
+                    <div class="nq-s2-card-action">
+                        <a href="#" class="nq-s2-btn-outline"><span data-i18n="common.learnMore">Scopri di più</span> <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="nq-s2-prod-card">
+                    <div class="nq-s2-card-top">
+                        <span class="nq-s2-badge" style="background-color: #fbc531;" data-i18n="badge.honey">MIELE</span>
+                        <i class="fa-regular fa-heart nq-s2-heart"></i>
+                    </div>
+                    <div class="nq-s2-card-img">
+                        <img src="img/Miele di Alianto.jpg" alt="Miele" data-i18n-alt="prod.honey">
+                    </div>
+                    <div class="nq-s2-card-info">
+                        <h3 data-i18n="prod.honey">Miele di Alianto Italia</h3>
+                        <p class="nq-s2-code">NQAF002 - 500 g</p>
+                        <p class="nq-s2-origin"><img src="img/it-flag.png" alt="IT" class="nq-s2-flag"> <span data-i18n="common.italy">Italia</span></p>
+                    </div>
+                    <div class="nq-s2-card-action">
+                        <a href="#" class="nq-s2-btn-outline"><span data-i18n="common.learnMore">Scopri di più</span> <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Category & Featured Products Section End -->
+
+<!-- Story, Features & Footer Section Start (Scoped with nq-s3-) -->
+<div class="nq-s3-wrapper">
+    
+    <!-- 1. Our Story Section -->
+    <section class="nq-s3-story-section">
+        <div class="nq-s3-story-img-col">
+            <!-- Left Side Image (Size: 900x600) -->
+            <img src="img/story.jpg" alt="Landscape" class="nq-s3-main-img">
+            <div class="nq-s3-img-overlay">
+                <p data-i18n-html="story.overlay">La tradizione<br>che unisce i sapori</p>
+            </div>
+        </div>
+        
+        <div class="nq-s3-story-text-col">
+            <!-- Decorative Elements -->
+            <img src="img/leaf.png" alt="Leaves" class="nq-s3-deco-leaves">
+            <img src="img/wave.png" alt="Waves" class="nq-s3-deco-waves">
+            
+            <div class="nq-s3-story-content">
+                <div class="nq-s3-subtitle">
+                    <img src="img/it-flag.png" alt="IT Flag" class="nq-s2-flag">
+                    <span data-i18n="story.eyebrow">LA NOSTRA STORIA</span>
+                </div>
+                <h2 class="nq-s3-title" data-i18n-html="story.title">Passione italiana,<br>qualità senza compromessi</h2>
+                <p class="nq-s3-desc" data-i18n="story.desc">
+                    Noi, la qualità, da oltre 20 anni selezioniamo i migliori prodotti alimentari italiani, per offrirti un'esperienza di gusto autentica. Dalle specialità regionali ai grandi classici, portiamo sulla tua tavola il meglio del nostro territorio, con l'obiettivo di far vivere la vera tradizione italiana in ogni momento.
+                </p>
+                <a href="#" class="nq-s3-btn"><span data-i18n="common.learnMore">Scopri di più</span> <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Features Banner -->
+    <section class="nq-s3-features-banner">
+        <div class="nq-s3-container">
+            <div class="nq-s3-features-grid">
+                <!-- Feature 1 -->
+                <div class="nq-s3-feature-item">
+                    <div class="nq-s3-feat-icon" style="color: #00a8a8;"><i class="fa-brands fa-envira"></i></div>
+                    <div class="nq-s3-feat-text">
+                        <h4 data-i18n="feat.1.title">Prodotti selezionati</h4>
+                        <p> data-i18n="feat.1.text"Solo le migliori eccellenze italiane</p>
+                    </div>
+                </div>
+                <div class="nq-s3-divider"></div>
+                <!-- Feature 2 -->
+                <div class="nq-s3-feature-item">
+                    <div class="nq-s3-feat-icon" style="color: #ffb800;"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <div class="nq-s3-feat-text">
+                        <h4>100% Made in Italy</h4>
+                        <p> data-i18n="feat.2.text"Tradizione e autenticità</p>
+                    </div>
+                </div>
+                <div class="nq-s3-divider"></div>
+                <!-- Feature 3 -->
+                <div class="nq-s3-feature-item">
+                    <div class="nq-s3-feat-icon" style="color: #ffb800;"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="nq-s3-feat-text">
+                        <h4 data-i18n="top.quality">Qualità garantita</h4>
+                        <p> data-i18n="feat.3.text"Sicurezza e rispetto delle origini</p>
+                    </div>
+                </div>
+                <div class="nq-s3-divider"></div>
+                <!-- Feature 4 -->
+                <div class="nq-s3-feature-item">
+                    <div class="nq-s3-feat-icon" style="color: #ffb800;"><i class="fa-regular fa-heart"></i></div>
+                    <div class="nq-s3-feat-text">
+                        <h4 data-i18n="feat.4.title">Passione per il buon cibo</h4>
+                        <p> data-i18n="feat.4.text"Un viaggio di sapori</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Footer -->
+    <footer class="nq-s3-footer">
+        <div class="nq-s3-container">
+            <div class="nq-s3-footer-top">
+                <!-- Footer Logo + Social Icons -->
+                <div class="nq-s3-footer-col nq-s3-col-logo">
+                    <img src="img/footer-logo.png" alt="Gruppo Noi, la qualità">
+                    <div class="nq-s3-social-icons" aria-label="Social media">
+                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="nq-s3-footer-col nq-s3-col-nav">
+                    <h4 data-i18n="footer.nav">NAVIGAZIONE</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="nav.home">Home</a></li>
+                        <li><a href="#" data-i18n="nav.products">Prodotti</a></li>
+                        <li><a href="#" data-i18n="nav.categories">Categorie</a></li>
+                        <li><a href="#" data-i18n="nav.about">Chi Siamo</a></li>
+                        <li><a href="#" data-i18n="nav.contact">Contatti</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="nq-s3-footer-col nq-s3-col-news">
+                    <h4 data-i18n="footer.stay">RESTA AGGIORNATO</h4>
+                    <p data-i18n="footer.newsText">Iscriviti alla nostra newsletter per ricevere novità e offerte.</p>
+                    <form id="nq-s3-newsletter-form" class="nq-s3-news-form">
+                        <input type="email" placeholder="La tua email" aria-label="La tua email" data-i18n-placeholder="footer.email" data-i18n-aria="footer.email" required>
+                        <button type="submit" aria-label="Iscriviti" data-i18n-aria="footer.subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                </div>
+                
+                <!-- Company Contact Information -->
+                <div class="nq-s3-footer-col nq-s3-col-contact">
+                    <h4 data-i18n="footer.address">INDIRIZZO</h4>
+                    <p class="nq-s3-company-name">Gruppo Noi, la qualità srl</p>
+                    <address>
+                        <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span data-i18n-html="footer.addressLines">Viale C. Sabatini, 161<br>00144 Roma - Italia</span></p>
+                        <p><i class="fa-solid fa-phone" aria-hidden="true"></i><span>
+                            <a href="tel:+390666995093">+39 06 66995093</a><br>
+                            <a href="tel:+393791413514">+39 3791413514</a><br>
+                            <a href="tel:+390666993421">06 66993421*</a>
+                        </span></p>
+                        <p><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>
+                            <a href="mailto:info@noilaqualita.it">info@noilaqualita.it</a><br>
+                            <a href="mailto:info@golosaqualita.it">info@golosaqualita.it</a>
+                        </span></p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="nq-s3-footer-bottom">
+                <div class="nq-s3-copy">
+                    &copy; 2026 Noi, la qualità srl. <span data-i18n="footer.rights">Tutti i diritti riservati.</span>
+                </div>
+                <div class="nq-s3-footer-links">
+                    <div class="lang-switcher lang-switcher--footer" data-lang-switcher>
+                        <button type="button" class="nq-s3-lang" aria-haspopup="listbox" aria-expanded="false" aria-label="Scegli la lingua" data-i18n-aria="lang.choose">
+                            <img src="img/it-flag.png" alt="" class="nq-s2-flag" data-lang-flag> <span data-lang-code>IT</span> <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <ul class="lang-menu" role="listbox">
+                            <li role="presentation"><button type="button" role="option" data-lang="it" aria-selected="true"><img src="img/it-flag.png" alt="" class="lang-flag"><span>Italiano</span></button></li>
+                            <li role="presentation"><button type="button" role="option" data-lang="en" aria-selected="false"><img src="img/en-flag.svg" alt="" class="lang-flag"><span>English</span></button></li>
+                        </ul>
+                    </div>
+                    <a href="#">Privacy Policy</a>
+                    <span class="nq-s3-sep">|</span>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <!-- Footer Decorative Wave (Size: 150x100) -->
+                <img src="img/wave.png" alt="Wave" class="nq-s4-deco-waves">
+            </div>
+        </div>
+    </footer>
+</div>
+<!-- Story, Features & Footer Section End -->
+
+    <!-- Custom JS -->
+    <script src="js/script.js?v=4"></script>
+</body>
+</html>
